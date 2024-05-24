@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  bid-it-db:
+    image: postgres
+    restart: always
+    container_name: bid-it-db
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=bid_db
+      - POSTGRES_USER=santu
+      - POSTGRES_PASSWORD=password
+      - PGDATA=/data/postgres # corrected here
+    volumes:
+      - postgres:/data/postgres # corrected here
+
+volumes:
+  postgres:
