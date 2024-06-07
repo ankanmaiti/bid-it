@@ -8,6 +8,13 @@
       "when": 1717337109373,
       "tag": "0000_talented_stardust",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1717759794260,
+      "tag": "0001_majestic_loki",
+      "breakpoints": true
     }
   ]
 }
