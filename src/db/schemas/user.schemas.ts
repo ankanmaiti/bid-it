@@ -2,8 +2,9 @@ import {
   date,
   index,
   pgTable,
+  text,
   timestamp,
-  varchar
+  varchar,
 } from "drizzle-orm/pg-core";
 
 export const users = pgTable(
@@ -11,7 +12,8 @@ export const users = pgTable(
   {
     name: varchar("name", { length: 30 }).notNull(),
     email: varchar("email", { length: 150 }).notNull().unique(),
-    dob: date('dob', { mode: 'date' }).notNull(),
+    dob: date("dob", { mode: "date" }).notNull(),
+    password: text("password").notNull(),
     createdAt: timestamp("created_at").notNull().defaultNow(),
     updatedAt: timestamp("updated_at")
       .notNull()
